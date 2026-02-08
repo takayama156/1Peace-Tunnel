@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('font/Outfit-Bold.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: normal;
+}
+
+.page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #410002;
+    padding: 2em;
+    margin: 0;
+}
+
+.dalam {
+    background-color: #690005;
+    padding: 2em;
+    color: #ffb4ab;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.lingkaran {
+    height: 3em;
+    width: 3em;
+    background-color: #ffb4ab40;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pancar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffb4ab7e; /* Warna sesuai permintaan ente */
+    border-radius: 50%;
+    animation: ripple 2s infinite ease-out;
+}
+
+.inti {
+    height: 1em;
+    width: 1em;
+    background-color: #ffb4ab;
+    border-radius: 50%;
+    z-index: 2; /* Memastikan titik inti tetap di depan */
+}
+
+.judul {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.tombol {
+    background-color: #ffb4ab;
+    width: 100%; /* Sekarang 100% sudah termasuk padding di dalamnya */
+    border-radius: 4px;
+    padding: 0.5em;
+    border: none; /* Opsional: menghapus border default tombol */
+    cursor: pointer;
+    font-family: inherit; /* Agar font sama dengan induknya */
+    color: #410002; /* Warna teks agar kontras */
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin: 0.2em 0 0 0 
+}
+
+.unduh {
+    width: 100%; /* Sekarang 100% sudah termasuk padding di dalamnya */
+    cursor: pointer;
+    font-family: inherit;
+    color: #ffb4ab; 
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center
+}
+
+.footer-links {
+    margin-top: 2em;
+    font-size: 0.85em;
+    color: #7a3634;
+    display: flex;
+    justify-content: center; /* Mengetengahkan konten secara horizontal */
+    flex-wrap: wrap;         /* Agar link turun ke bawah jika layar terlalu sempit */
+    gap: 0.5em;              /* Jarak antar link dan titik */
+    width: 100%;             /* Memastikan kontainer mengambil lebar penuh */
+}
+
+.footer-links a {
+    color: #7a3634;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.logo {
+  margin-top: 1em;
+  font-family: 'Outfit';
+  font-size: 1.2em;
+  text-align: center;
+  color: #7a3634
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5); /* Membesar hingga 2.5x ukuran asli */
+        opacity: 0;           /* Memudar hingga hilang */
+    }
+}
+@media (min-width: 1024px) {
+    .dalam {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
